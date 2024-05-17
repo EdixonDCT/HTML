@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+</head>
+<body>
+    <center><img src="imagenes/sena.png"
+    style="width:100px;height:100px;"></center>
+    <ul>
+        <li><a href="principal.html">Pagina principal</a></li>
+        <li><a href="salida.html">Salida</a></li>
+        <li><a href="configuracion.html">Configuracion</a></li>
+        <li><a href="formulario.html">Contacto</a></li>
+        <li><a href="lista.html">Lista</a></li>
+      </ul>
+  <form action="controlador" method="get" enctype="multipart/form-data">
+    <div>
+      <label for="edad">ingrese su edad</label>
+      <input type="number" step="1" min="0" max="20" value="5" name="edad" disabled id="edad">
+    </div>
+    <div>
+      <label for="nombre">nombre</label>
+      <input type="text" name="nombre" pattern="[a-zA-Z]{0,20}" placeholder="ingrese su nombre" id="nombre" autofocus
+        autocomplete="off">
+    </div>
+    <div>
+      <label for="color">seleccione un color</label>
+      <input type="color" id="color">
+    <div>
+      <label for="correo">ingrese su correo</label>
+      <input type="text" id="correo" required>
+    </div>
+    <div>
+      <label for="telefono">ingrese su telefono</label>
+      <input type="text" id="telefono" required pattern="[0-9]{0,10}" required>
+    </div>
+    <label for="ciudad">Seleccione su ciudad</label>
+    <select name="ciudad" id="ciudad">
+        <option value="1">Giron</option>
+        <option value="2">Bucaramanga</option>
+        <option value="3" selected>Florida</option>
+    </select>
+</div>
+    <div>
+        <label for="Genero">Seleccione su Genero
+        <input type="radio" name="Genero"> Mujer
+        <input type="radio" name="Genero" checked> Hombre
+        </label>
+     </div>
+     <div>
+        <label for="study">Seleccione que desea estudiar
+        <input type="checkbox" name="study" checked> HTML
+        <input type="checkbox" name="study" checked> GIT
+        <input type="checkbox" name="study" checked> CLI
+        <input type="checkbox" name="study"> JS
+        </label>
+     </div>
+     <div>
+        <label for="avatar">Seleccione un avatar
+        <div>
+        <input accept="image/png,image/jpg" type="file" name="img" id="avatar" multiple>
+        </div>
+        </label>
+     </div>
+    </div>
+    <div>
+       <label for="pdf">Seleccione pdf
+       <div>
+       <input accept=".pdf" type="file" name="pdf" id="pdf" multiple>
+       </div>
+       </label>
+    </div>
+    <button type="submit">guardar</button>
+  </form>
+</body>
+</html>
